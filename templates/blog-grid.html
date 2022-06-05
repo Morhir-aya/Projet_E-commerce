@@ -16,7 +16,7 @@
 				<div class="content">
 					<h1 class="page-name">Blog</h1>
 					<ol class="breadcrumb">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="{% url 'home' %}">Home</a></li>
 						<li class="active">blog</li>
 					</ol>
 				</div>
@@ -47,8 +47,8 @@
 		                <i class="tf-ion-android-person"></i> POSTED BY ADMIN
 		              </li>
 		              <li>
-		                <a href="blog-grid.html"><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href="blog-grid.html"> TRAVEL</a>, <a
-		                href="blog-grid.html">FASHION</a>
+		                <a href="{% url 'blog' %}"><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href="blog-grid.html"> TRAVEL</a>, <a
+		                href="{% url 'blog' %}">FASHION</a>
 		              </li>
 		              <li>
 		                <a href="#!"><i class="tf-ion-chatbubbles"></i> 4 COMMENTS</a>
