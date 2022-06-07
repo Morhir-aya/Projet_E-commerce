@@ -14,7 +14,7 @@
 				<div class="content">
 					<h1 class="page-name">Checkout</h1>
 					<ol class="breadcrumb">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="{% url 'home' %}">Home</a></li>
 						<li class="active">checkout</li>
 					</ol>
 				</div>
@@ -73,7 +73,7 @@
                                  <label for="card-cvc">Card Code <span class="required">*</span></label>
                                  <input id="card-cvc" class="form-control"  type="tel" maxlength="4" placeholder="CVC" >
                               </div>
-                              <a href="confirmation.html" class="btn btn-main mt-20">Place Order</a >
+                              <a href="{% url 'confirm' %}" class="btn btn-main mt-20">Place Order</a >
                            </form>
                         </div>
                      </div>
@@ -85,11 +85,11 @@
                   <div class="block">
                      <h4 class="widget-title">Order Summary</h4>
                      <div class="media product-card">
-                        <a class="pull-left" href="product-single.html">
+                        <a class="pull-left" href="{% url 'prodd' %}">
                            <img class="media-object" src="{%static 'images/shop/cart/cart-1.jpg'%}" alt="Image" />
                         </a>
                         <div class="media-body">
-                           <h4 class="media-heading"><a href="product-single.html">Ambassador Heritage 1921</a></h4>
+                           <h4 class="media-heading"><a href="{% url 'prodd' %}">Ambassador Heritage 1921</a></h4>
                            <p class="price">1 x $249</p>
                            <span class="remove" >Remove</span>
                         </div>

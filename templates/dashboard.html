@@ -15,7 +15,7 @@
 				<div class="content">
 					<h1 class="page-name">Dashboard</h1>
 					<ol class="breadcrumb">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="{% url 'home' %}">Home</a></li>
 						<li class="active">my account</li>
 					</ol>
 				</div>
@@ -30,10 +30,10 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ul class="list-inline dashboard-menu text-center">
-					<li><a class="active" href="dashboard.html">Dashboard</a></li>
-					<li><a href="order.html">Orders</a></li>
-					<li><a href="address.html">Address</a></li>
-					<li><a href="profile-details.html">Profile Details</a></li>
+					<li><a class="active" href="{% url 'dash' %}">Dashboard</a></li>
+					<li><a href="{% url 'order' %}">Orders</a></li>
+					<li><a href="{% url 'address' %}">Address</a></li>
+					<li><a href="{% url 'profild' %}">Profile Details</a></li>
 				</ul>
 				<div class="dashboard-wrapper user-dashboard">
 					<div class="media">
