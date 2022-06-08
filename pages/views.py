@@ -1,10 +1,11 @@
 from django.shortcuts import render
+from.form import *
 
 def sign(request):
-    return render(request,'signin.html')
+    return render(request,'signin.html',{'post':form_login})
 
 def login(request):
-    return render(request,'login.html')
+    return render(request,'login.html',{'post':form_login})
 
 def home(request):
     return render(request,'index.html')
