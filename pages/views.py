@@ -1,11 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.http import HttpResponseRedirect
 from.form import *
 
 def sign(request):
-    return render(request,'signin.html',{'post':form_login})
+    if request.method=="POST":
+       form_login(request.POST).save(commit=True)
+       return redirect("login")
+    return render(request,'signin.html',{'forme': form_login})
 
 def login(request):
-    return render(request,'login.html',{'post':form_login})
+    return render(request,'login.html',{'forme':form_login})
 
 def home(request):
     return render(request,'index.html')

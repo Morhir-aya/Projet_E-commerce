@@ -14,21 +14,22 @@
             <img src="{% static 'images/logo.png'%}" alt="">
           </a>
           <h2 class="text-center">Create Your Account</h2>
-          <form class="text-left clearfix" action="">
+          <form class="text-left clearfix" method="post" action="">
+            {% csrf_token %}
             <div class="form-group">
-              {{post.first_name}}
+              {{forme.first_name}}
             </div>
             <div class="form-group">
-              {{post.last_name}}
+              {{forme.last_name}}
             </div>
             <div class="form-group">
-              {{post.username}}
+              {{forme.username}}
             </div>
             <div class="form-group">
-              {{post.email}}
+              {{forme.email}}
             </div>
             <div class="form-group">
-              {{post.password}}
+              {{forme.password}}
             </div>
             <div class="text-center">
               <button type="submit" class="btn btn-main text-center">Sign In</button>
