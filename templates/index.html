@@ -92,12 +92,12 @@
 			</div>
 		</div>
 		<div class="row">
-			
+			{% for product in pro %}
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
 						<span class="bage">Sale</span>
-						<img class="img-responsive" src="{% static 'images/shop/products/product-1.jpg'%}" alt="product-img" />
+						<img class="img-responsive" src="{{product.product_image.url}}" alt="product-img" />
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -115,12 +115,13 @@
                       	</div>
 					</div>
 					<div class="product-content">
-						<h4><a href="{% url 'prodd' %}">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
+						<h4><a href="{% url 'prodd' %}">{{product.Title}}</a></h4>
+						<p class="price">{{product.price}}</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
+			{% endfor %}
+			<!--<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
 						<img class="img-responsive" src="{% static 'images/shop/products/product-2.jpg'%}" alt="product-img" />
@@ -328,7 +329,7 @@
 						<p class="price">$200</p>
 					</div>
 				</div>
-			</div>
+			</div>-->
 		
 		<!-- Modal -->
 		<div class="modal product-modal fade" id="product-modal">
