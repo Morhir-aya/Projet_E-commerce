@@ -97,7 +97,9 @@
 				<div class="product-item">
 					<div class="product-thumb">
 						<span class="bage">Sale</span>
-						<img class="img-responsive" src="{{product.product_image.url}}" alt="product-img" />
+						{%if product.product_image%}
+						<img class="img-responsive" src="{{product.product_image}}" alt="product-img" />
+						{%endif%}
 						<div class="preview-meta">
 							<ul>
 								<li>
@@ -121,7 +123,7 @@
 				</div>
 			</div>
 			{% endfor %}
-			<!--<div class="col-md-4">
+			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
 						<img class="img-responsive" src="{% static 'images/shop/products/product-2.jpg'%}" alt="product-img" />
@@ -147,7 +149,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<!--<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
 						<img class="img-responsive" src="{% static 'images/shop/products/product-3.jpg'%}" alt="product-img" />
